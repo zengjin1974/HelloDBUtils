@@ -1,4 +1,8 @@
- package com.test.dbutils;
+/*
+ * https://www.javatips.net/blog/apache-dbutils-tutorial
+ */
+
+package com.test.dbutils;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -28,7 +32,16 @@ public class BeanListHandlerExample {
 
         try {
             List<Employee> empList = run.query(conn, "SELECT * FROM employee", resultListHandler);
+
             System.out.println(empList);
+
+    		for (Employee bean : empList) {
+
+    			System.out.println(bean.getEmployeeId());
+    			System.out.println(bean.getEmployeename());
+       			System.out.println(bean.getEmployee_address());
+    		}
+
         } finally {
             DbUtils.close(conn);
         }
