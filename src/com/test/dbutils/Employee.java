@@ -1,4 +1,4 @@
-package sample.dbutils;
+package com.test.dbutils;
 
 public class Employee {
     private static final long serialVersionUID = 1L;

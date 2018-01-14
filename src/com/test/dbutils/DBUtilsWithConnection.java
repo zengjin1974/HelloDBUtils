@@ -2,7 +2,7 @@
  * https://www.javatips.net/blog/apache-dbutils-tutorial
  */
 
-package sample.dbutils;
+package com.test.dbutils;
 
 
 import java.sql.Connection;
