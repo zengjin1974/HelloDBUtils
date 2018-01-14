@@ -14,7 +14,7 @@ import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.ResultSetHandler;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 
-public class DBUtilsWithConnection {
+public class BeanHandlerExample {
 
     public static void main(String[] args) throws SQLException {
 

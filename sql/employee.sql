@@ -7,5 +7,5 @@ CREATE TABLE `employee` (
   PRIMARY KEY (`EMPLOYEEID`)
 );
 
-insert into `employee` (`EMPLOYEEID`, `EMPLOYEENAME`, `EMPLOYEE_ADDRESS`) values('1','Rockey','1');
-insert into `employee` (`EMPLOYEEID`, `EMPLOYEENAME`, `EMPLOYEE_ADDRESS`) values('2','Jose','2');
+insert into `employee` (`EMPLOYEEID`, `EMPLOYEENAME`, `EMPLOYEE_ADDRESS`) values('1','Rockey','Beijing');
+insert into `employee` (`EMPLOYEEID`, `EMPLOYEENAME`, `EMPLOYEE_ADDRESS`) values('2','Jose','Shanghai');

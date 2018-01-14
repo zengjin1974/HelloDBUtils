@@ -1,6 +1,9 @@
 package com.test.dbutils;
 
-public class Employee {
+import java.io.Serializable;
+
+public class Employee implements PrimaryKeys, Serializable {
+
     private static final long serialVersionUID = 1L;
 
     //EMPLOYEEID
@@ -75,5 +78,32 @@ public class Employee {
     */
     public String getEmployee_address() {
         return employee_address;
+    }
+
+    /**
+     * toString()をオーバーライドします。
+     * JavaBeansの内容を取得します。
+     * @return JavaBeansの内容
+     */
+    public String toString() {
+
+        // 返却用
+        final int buffer = 200;
+        StringBuffer sb = new StringBuffer(buffer);
+
+        // MakePrimaryKeysSQLオブジェクト生成
+        MakePrimaryKeysSQL pk = new MakePrimaryKeysSQL(this);
+
+        // 全ての項目取得
+        ColumnParamBean[] all = pk.getAll();
+
+        // 項目内容を格納
+        for (int i = 0; i < all.length; i++) {
+            sb.append(all[i].getColumn() + "=" + all[i].getParam() + ",");
+        }
+
+        // 返却
+        return "[" + sb.toString() + "]";
+
     }
 }
