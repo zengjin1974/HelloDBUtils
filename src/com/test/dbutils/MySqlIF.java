@@ -1,6 +1,6 @@
 package com.test.dbutils;
 
-public interface ExampleIF {
+public interface MySqlIF {
     final String url = "jdbc:mysql://10.167.39.187:3306/lab";
     final String driver = "com.mysql.jdbc.Driver";
     final String usr = "root";

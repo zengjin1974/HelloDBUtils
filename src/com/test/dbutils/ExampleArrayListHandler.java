@@ -13,7 +13,7 @@ import org.apache.commons.dbutils.DbUtils;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.ArrayListHandler;
 
-public class ExampleArrayListHandler implements ExampleIF {
+public class ExampleArrayListHandler implements MySqlIF {
 
     public static void main(String[] args) throws SQLException {
 

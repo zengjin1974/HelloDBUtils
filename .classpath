@@ -8,5 +8,6 @@
 	<classpathentry kind="lib" path="lib/commons-dbutils-1.7-tests.jar"/>
 	<classpathentry kind="lib" path="lib/commons-dbutils-1.7.jar"/>
 	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.45-bin.jar"/>
+	<classpathentry kind="lib" path="lib/postgresql-jdbc4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

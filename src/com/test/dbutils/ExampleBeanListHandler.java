@@ -14,7 +14,7 @@ import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.ResultSetHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 
-public class ExampleBeanListHandler implements ExampleIF {
+public class ExampleBeanListHandler implements PostgreIF {
 
     public static void main(String[] args) throws SQLException {
 

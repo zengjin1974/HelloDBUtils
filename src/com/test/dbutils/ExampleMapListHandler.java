@@ -14,7 +14,7 @@ import org.apache.commons.dbutils.DbUtils;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.MapListHandler;
 
-public class ExampleMapListHandler implements ExampleIF {
+public class ExampleMapListHandler implements PostgreIF {
 
    public static void main(String[] args) throws SQLException {
 

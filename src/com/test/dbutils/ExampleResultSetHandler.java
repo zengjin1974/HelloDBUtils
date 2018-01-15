@@ -14,7 +14,7 @@ import org.apache.commons.dbutils.DbUtils;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.ResultSetHandler;
 
-public class ExampleResultSetHandler implements ExampleIF {
+public class ExampleResultSetHandler implements PostgreIF {
 
     public static void main(String[] args) throws SQLException {
 
@@ -41,7 +41,7 @@ public class ExampleResultSetHandler implements ExampleIF {
         };
 
         try {
-            Object[] result = run.query(conn, "SELECT * FROM employee WHERE employeename=?", handler, "Rockey");
+            Object[] result = run.query(conn, "SELECT * FROM employee WHERE employee_name=?", handler, "Jose");
             System.out.println(Arrays.toString(result));
 
         } finally { // Use this helper method so we don't have to check for
