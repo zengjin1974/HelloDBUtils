@@ -27,9 +27,13 @@ public class ExampleBeanHandler implements ExampleIF {
 
 
         try {
-            Employee emp = run.query(conn, "SELECT * FROM employee WHERE employeename=?",
+            Employee emp = run.query(conn, "SELECT * FROM employee WHERE employee_name=?",
                     resultHandler, "Jose");
-            System.out.println(emp.getEmployeeId());
+            System.out.println(emp.getEmployee_id());
+            System.out.println(emp.getEmployee_name());
+            System.out.println(emp.getEmployee_address());
+            System.out.println(emp.getEmployee_salary());
+            System.out.println(emp.getEmployee_birth());
         } finally {
             DbUtils.close(conn);
         }

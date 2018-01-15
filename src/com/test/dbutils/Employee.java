@@ -1,26 +1,42 @@
+/*
+ * EMPLOYEEBean.java
+ *
+ * Copyright (C) 2018 FUJITSU LIMITED, All Rights Reserved.
+ */
+
 package com.test.dbutils;
 
-import java.io.Serializable;
+import java.math.BigDecimal;
+import java.sql.Timestamp;
 
-public class Employee implements PrimaryKeys, Serializable {
+/**
+ * EMPLOYEEBean
+ */
+public class Employee  {
 
     private static final long serialVersionUID = 1L;
 
-    //EMPLOYEEID
-    private int employeeId;
+    //EMPLOYEE_ID
+    private int employee_id = 0;
 
-    //EMPLOYEENAME
-    private String employeeName;
+    //EMPLOYEE_NAME
+    private String employee_name;
 
     //EMPLOYEE_ADDRESS
     private String employee_address;
+
+    //EMPLOYEE_BIRTH
+    private Timestamp employee_birth = null;
+
+    //EMPLOYEE_SALARY
+    private BigDecimal employee_salary = new BigDecimal(0);
 
 
     /* テーブル名 */
     private String tableName = "EMPLOYEE";
 
     /* プライマリーキー */
-    private String[] primaryKeys = {"employeeid"};
+    private String[] primaryKeys = {"employee_id"};
 
     /**
      * テーブル名を取得します。
@@ -39,31 +55,31 @@ public class Employee implements PrimaryKeys, Serializable {
     }
 
    /**
-    * EMPLOYEEIDを設定する
+    * EMPLOYEE_IDを設定する
     */
-    public void setEmployeeId(int employeeid) {
-        this.employeeId = employeeid;
+    public void setEmployee_id(int employee_id) {
+        this.employee_id = employee_id;
     }
 
    /**
-    * EMPLOYEEIDを取得する
+    * EMPLOYEE_IDを取得する
     */
-    public int getEmployeeId() {
-        return employeeId;
+    public int getEmployee_id() {
+        return employee_id;
     }
 
    /**
-    * EMPLOYEENAMEを設定する
+    * EMPLOYEE_NAMEを設定する
     */
-    public void setEmployeename(String employeename) {
-        this.employeeName = employeename;
+    public void setEmployee_name(String employee_name) {
+        this.employee_name = employee_name;
     }
 
    /**
-    * EMPLOYEENAMEを取得する
+    * EMPLOYEE_NAMEを取得する
     */
-    public String getEmployeename() {
-        return employeeName;
+    public String getEmployee_name() {
+        return employee_name;
     }
 
    /**
@@ -80,30 +96,33 @@ public class Employee implements PrimaryKeys, Serializable {
         return employee_address;
     }
 
-    /**
-     * toString()をオーバーライドします。
-     * JavaBeansの内容を取得します。
-     * @return JavaBeansの内容
-     */
-    public String toString() {
-
-        // 返却用
-        final int buffer = 200;
-        StringBuffer sb = new StringBuffer(buffer);
-
-        // MakePrimaryKeysSQLオブジェクト生成
-        MakePrimaryKeysSQL pk = new MakePrimaryKeysSQL(this);
-
-        // 全ての項目取得
-        ColumnParamBean[] all = pk.getAll();
-
-        // 項目内容を格納
-        for (int i = 0; i < all.length; i++) {
-            sb.append(all[i].getColumn() + "=" + all[i].getParam() + ",");
-        }
-
-        // 返却
-        return "[" + sb.toString() + "]";
-
+   /**
+    * EMPLOYEE_BIRTHを設定する
+    */
+    public void setEmployee_birth(Timestamp employee_birth) {
+        this.employee_birth = employee_birth;
     }
+
+   /**
+    * EMPLOYEE_BIRTHを取得する
+    */
+    public Timestamp getEmployee_birth() {
+        return employee_birth;
+    }
+
+   /**
+    * EMPLOYEE_SALARYを設定する
+    */
+    public void setEmployee_salary(BigDecimal employee_salary) {
+        this.employee_salary = employee_salary;
+    }
+
+   /**
+    * EMPLOYEE_SALARYを取得する
+    */
+    public BigDecimal getEmployee_salary() {
+        return employee_salary;
+    }
+
 }
+

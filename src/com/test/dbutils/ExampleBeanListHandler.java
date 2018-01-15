@@ -30,11 +30,12 @@ public class ExampleBeanListHandler implements ExampleIF {
 
             System.out.println(empList);
 
-    		for (Employee bean : empList) {
-
-    			System.out.println(bean.getEmployeeId());
-    			System.out.println(bean.getEmployeename());
-       			System.out.println(bean.getEmployee_address());
+    		for (Employee emp : empList) {
+                System.out.println(emp.getEmployee_id());
+                System.out.println(emp.getEmployee_name());
+                System.out.println(emp.getEmployee_address());
+                System.out.println(emp.getEmployee_salary());
+                System.out.println(emp.getEmployee_birth());
     		}
 
         } finally {
