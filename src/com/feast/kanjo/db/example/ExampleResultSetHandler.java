@@ -1,7 +1,7 @@
 /*
  * https://www.javatips.net/blog/apache-dbutils-tutorial
  */
-package com.test.dbutils;
+package com.feast.kanjo.db.example;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

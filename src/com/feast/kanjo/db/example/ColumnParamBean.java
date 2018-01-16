@@ -1,4 +1,4 @@
-package com.test.dbutils;
+package com.feast.kanjo.db.example;
 
 
 /**

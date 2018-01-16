@@ -1,4 +1,4 @@
-package com.test.dbutils;
+package com.feast.kanjo.db.example;
 
 public interface MySqlIF {
     final String url = "jdbc:mysql://10.167.39.187:3306/lab";

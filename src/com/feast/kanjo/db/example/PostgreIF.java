@@ -1,4 +1,4 @@
-package com.test.dbutils;
+package com.feast.kanjo.db.example;
 
 public interface PostgreIF {
     final String url = "jdbc:postgresql://10.167.39.185:27500/dept_dev";

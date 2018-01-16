@@ -4,7 +4,7 @@
  * Copyright (C) 2018 FUJITSU LIMITED, All Rights Reserved.
  */
 
-package com.test.dbutils;
+package com.feast.kanjo.db.example;
 
 import java.math.BigDecimal;
 import java.sql.Timestamp;
